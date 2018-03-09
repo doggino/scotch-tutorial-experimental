@@ -105,7 +105,7 @@
       }
       .masthead h2 {
         margin-top: 0.5em;
-        font-size: 1.5em;
+        font-size: 1.2em;
       }
     }
 
@@ -152,6 +152,7 @@ body {
     margin: 0 0 0px;  /* Note: this was 0 0 100px before I changed it; might be useful if faced with future footer positioning issues */
     /* bottom = footer height */
     padding: 25px;
+    font-family: Mandali;
 }
 
 #header-and-body{
@@ -170,6 +171,14 @@ body {
     width: 100%;
 }
 
+h1.ui.header, h2.ui.header, h3.ui.header, h4.ui.header, div#footer p{
+    font-family: Mandali;
+}
+
+p{
+    font-family: Josefin Slab;
+}
+
 /*My own additions to get the footer to stick to bottom and not disrupt content*/
     @media only screen and (max-width: 700px) {
     #header-and-body{
@@ -186,6 +195,10 @@ body {
         padding: 2em;
         height: 30em;
         width: 100%;
+    }
+    .ui.medium.images .image, .ui.medium.images img, .ui.medium.images svg, .ui.medium.image{
+        width: 150px;
+
     }
 }
 
@@ -340,11 +353,11 @@ body {
                     </div>
                 </div>
             </div>
-            <div class="ui text container">
-                <h1 class="ui inverted header">
-                    Imagine-a-Company
-                </h1>
-                <h2>Do whatever you want when you want to.</h2>
+            <div class="ui container" style="padding-top:5em; padding-bottom:5em">
+
+            <img class="ui centered middle aligned medium image home-banner-responsive-element"
+                 src="{{ url_for('static', filename='img/logo/logo-grey-large.png') }}">
+                <h2 class="home-banner-responsive-element">An elegant way to manage experimental meta data and results</h2>
                 <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
             </div>
         </div>
